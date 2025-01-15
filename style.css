@@ -159,6 +159,11 @@ nav ul li a:hover::after {
     display: block;
 }
 
+.tab-contents ul li span.degree {
+    color: #ff004f; 
+    font-style: italic;
+}
+
 #portfolio{
     padding: 50px 0;
 }
@@ -177,10 +182,25 @@ nav ul li a:hover::after {
 }
 
 .work img{
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
     display: block;
     transition: transform(0.5);
+}
+
+.work2-image {
+    height: 387px; 
+    border-radius: 10px;
+    margin-left: 25px; 
+
+    
+}
+
+.work3-image {
+    height: 387px; 
+    border-radius: 10px;
+    margin-left: 25px; 
+
 }
 
 
