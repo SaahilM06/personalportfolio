@@ -24,6 +24,22 @@ body{
     padding: 10px 10%;
 }
 
+
+
+/* Universal full-section container behavior */
+.section {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #080808; /* keep consistent dark bg */
+}
+
+.section .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 10%;
+}
+
+
 nav{
     display: flex;
     align-items: cetner;
@@ -412,3 +428,324 @@ nav .fas{
 
 
 }
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    padding: 40px 0;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .work-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: #1f1f1f;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .work-card.active {
+    display: flex;
+  }
+  
+  .work-card img {
+    width: 60%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .work-card h3 {
+    margin: 10px 0;
+    color: #ff004f;
+  }
+  
+  .work-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .work-card a {
+    text-decoration: none;
+    color: #fff;
+    background: #ff004f;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .work-card a:hover {
+    background: #e60047;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 15px;
+    z-index: 100;
+  }
+  
+  .left-arrow {
+    left: 0;
+  }
+  
+  .right-arrow {
+    right: 0;
+  }
+
+  
+  /* Updated Full-Width Project Card Styles */
+.work-card {
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .work-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .work-card img {
+    width: 35%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .work-content {
+    flex: 1;
+  }
+  
+  .work-content h3 {
+    color: #ff004f;
+    margin-bottom: 15px;
+  }
+  
+  .work-content p {
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .work-content a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #ff004f;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .work-content a:hover {
+    background: #e60047;
+  }
+  
+  /* Responsive: Stack image and content on smaller screens */
+  @media (max-width: 768px) {
+    .work-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .work-card img {
+      width: 100%;
+    }
+  
+    .work-content {
+      padding-top: 20px;
+    }
+  }
+
+  
+
+
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .work-card {
+    display: none;
+    flex-direction: row;
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    padding: 30px;
+    gap: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .work-card.active {
+    display: flex;
+  }
+  
+  .work-card img {
+    width: 35%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .work-content {
+    flex: 1;
+  }
+  
+  .work-content h3 {
+    color: #ff004f;
+    margin-bottom: 15px;
+  }
+  
+  .work-content p {
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .work-content a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #ff004f;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .work-content a:hover {
+    background: #e60047;
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0 15px;
+  }
+  
+  .carousel-arrow.left {
+    left: 0;
+  }
+  
+  .carousel-arrow.right {
+    right: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .work-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .work-card img {
+      width: 100%;
+    }
+  
+    .work-content {
+      padding-top: 20px;
+    }
+  }
+
+
+  .carousel-track {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .work-card {
+    display: none;
+    flex-direction: row;
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    padding: 30px;
+    gap: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    min-height: 400px; /* Fixes the height */
+  }
+  
+  .work-card.active {
+    display: flex;
+  }
+  
+  /* Fixed image container */
+  .work-card img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .work-content {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .work-content h3 {
+    color: #ff004f;
+    margin-bottom: 15px;
+  }
+  
+  .work-content p {
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .work-content a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #ff004f;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .work-content a:hover {
+    background: #e60047;
+  }
+  
+  
