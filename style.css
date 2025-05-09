@@ -289,7 +289,7 @@ nav ul li a:hover::after {
     transition: 0.5s;
 }
 
-tab-links.active-link::after{
+.tab-links.active-link::after{
     width: 50%;
 
 }
@@ -1013,6 +1013,7 @@ nav .fas{
 
     .sub-title {
       font-size: 32px;
+     
     }
 
     .tab-titles {
@@ -1029,6 +1030,7 @@ nav .fas{
       text-align: center;
       gap: 20px;
     }
+ 
 
     .work-card img {
       width: 100%;
