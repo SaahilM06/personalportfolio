@@ -984,6 +984,86 @@ nav .fas{
    
     }
   }
+
+  <style>
+  /* Add this at the bottom of your CSS file */
+  @media (max-width: 600px) {
+    .tab-wrapper {
+      padding: 0 1rem;
+    }
+
+    .tab-links {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .tab-contents ul li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .tab-contents ul li span {
+      font-size: 18px;
+    }
+
+    .about-col-2 {
+      padding: 0 10px;
+      text-align: left;
+    }
+
+    .sub-title {
+      font-size: 32px;
+    }
+
+    .tab-titles {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .carousel-wrapper {
+      padding: 0;
+    }
+
+    .work-card {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .work-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .work-content {
+      padding: 0 10px;
+    }
+
+    .header-content {
+      flex-direction: column;
+      padding: 0 10px;
+      text-align: center;
+      height: auto;
+    }
+
+    .header-text h1 {
+      font-size: 2rem;
+    }
+
+    .header-text .intro {
+      font-size: 1rem;
+    }
+
+    .header-img {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    nav ul {
+      right: -100%;
+    }
+  }
+</style>
   
 
 
