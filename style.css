@@ -1,3 +1,60 @@
+/* ─── INTRO OVERLAY ─────────────────────────────────────────────────────────── */
+#intro {
+    position: fixed;
+    inset: 0;
+    background: #080808;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+  }
+  
+  .animated-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .animated-bg span {
+    position: absolute;
+    font-size: 2.5rem;
+    color: rgba(255,255,255,0.08);
+    animation: float 12s linear infinite;
+  }
+  .animated-bg span:nth-child(1)  { top: 10%;  left: 20%;  animation-delay: 0s; }
+  .animated-bg span:nth-child(2)  { top: 30%;  left: 75%;  animation-delay: 2s; }
+  .animated-bg span:nth-child(3)  { top: 60%;  left: 10%;  animation-delay: 4s; }
+  .animated-bg span:nth-child(4)  { top: 80%;  left: 50%;  animation-delay: 6s; }
+  .animated-bg span:nth-child(5)  { top: 50%;  left: 85%;  animation-delay: 8s; }
+  .animated-bg span:nth-child(6)  { top: 20%;  left: 40%;  animation-delay: 10s;}
+  
+  @keyframes float {
+    0%   { transform: translate(0,0) scale(1); }
+    50%  { transform: translate(20px,-30px) scale(1.1); }
+    100% { transform: translate(0,0) scale(1); }
+  }
+  
+  .intro-text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+  }
+  .intro-text h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  .arrow {
+    font-size: 3rem;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+  }
+  @keyframes bounce {
+    0%,100%   { transform: translateY(0); }
+    50%       { transform: translateY(15px); }
+  }
+  
 *{
     margin : 0;
     padding : 0;
@@ -26,6 +83,7 @@ body{
 
 
 
+
 /* Universal full-section container behavior */
 .section {
   width: 100%;
@@ -39,11 +97,43 @@ body{
   padding: 0 10%;
 }
 
+/* make the container a positioning context */
+#header .container {
+    position: relative;
+  }
+  
+  /* badge at top-right */
+  .header-badge {
+    position: absolute;
+    top: 2rem;            /* tweak vertical offset */
+    left: 10%;           /* same as your container padding */
+    text-align: left;
+  }
+  
+  /* badge name styling */
+  .badge-name {
+    margin: 0;
+    font-size: 2rem;      /* similar scale to your h1 */
+    color: #fff;
+    left:0
+    line-height: 1;
+  }
+  
+  /* badge subtitle styling */
+  .badge-title {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #888;          /* a lighter grey tone */
+  }
+  
+
 
 nav{
     display: flex;
-    align-items: cetner;
+    align-items: center;
     justify-content: space-between;
+    
+    justify-content: flex-end;
     flex-wrap: wrap;
 }
 
@@ -55,13 +145,13 @@ nav{
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin:10px 20px;
+    margin:25px 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px;
     position: relative;
 }
 
@@ -81,19 +171,28 @@ nav ul li a:hover::after {
 }
 
 .header-text{
-    margin-top: 20%;
+    margin-top: 0;
+    margin-right: 15;
     font-size: 30px;
 }
 
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
+    margin-bottom: 2rem;
 
 }
 
 .header-text h1 span{
     color: #ff004f;
+    font-size: 48px;
 }
+
+.header-text h1 .intro {
+    font-size: 1.2rem;  
+      /* ↑ increase this value until it’s the right size */
+  
+  }
 
 /*about */
 
@@ -103,6 +202,7 @@ nav ul li a:hover::after {
 }
 .row{
     display: flex;
+    justify-content: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -116,10 +216,28 @@ nav ul li a:hover::after {
     border-radius: 15px;
 }
 
-.about-col-2{
-   flex-basis: 60%;
+.about-col-2 {
+    flex: 1 1 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-}
+  .about-col-2 .tab-titles {
+    justify-content: center;
+  }
+  
+  .about-col-2 .tab-contents {
+    text-align: center;
+  }
+  
+  .about-col-2 .tab-contents ul {
+    display: inline-block;
+    text-align: left;
+  }
 
 .sub-title{
     font-size: 60px;
@@ -134,12 +252,31 @@ nav ul li a:hover::after {
 
 .tab-links{
     margin-right: 50px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     cursor: pointer;
     position:relative;
 
 }
+
+.tab-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* centers the tabs + content */
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .tab-wrapper .tab-contents {
+    text-align: center;
+  }
+  
+  .tab-wrapper .tab-contents ul {
+    display: inline-block;
+    text-align: left;       /* keeps list items readable */
+  }
+  
 
 .tab-links::after{
     content: '';
@@ -152,7 +289,7 @@ nav ul li a:hover::after {
     transition: 0.5s;
 }
 
-.tab-links.active-link::after{
+tab-links.active-link::after{
     width: 50%;
 
 }
@@ -160,11 +297,15 @@ nav ul li a:hover::after {
 .tab-contents ul li{
     list-style: none;
     margin: 10px 0;
+    font-size: 20px; /* ⬅️ INCREASE main description text size */
+    line-height: 1.8;
 }
 
 .tab-contents ul li span{
     color:#b54769;
-    font-size: 14px;
+  
+    font-size: 22px; /* ⬅️ INCREASE section title size */
+  font-weight: 600;
 }
 
 .tab-contents{
@@ -218,6 +359,8 @@ nav ul li a:hover::after {
     margin-left: 25px; 
 
 }
+
+
 
 
 .layer {
@@ -747,5 +890,104 @@ nav .fas{
   .work-content a:hover {
     background: #e60047;
   }
+  
+
+  /* ─── HEADER FLEX LAYOUT ───────────────────────────────────────────────────── */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 20px); /* full viewport minus nav padding */
+    gap: 2rem;
+  }
+  
+  /* control the image size */
+  .header-img {
+    width: 350px;               /* match your img width */
+    max-width: 40%;
+    border-radius: 20px;        /* round the corners */
+    overflow: hidden;           /* clip the img to that radius */
+    background: #1f1f1f;        /* same dark tone as your cards */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1rem;        /* a little breathing room underneath */
+  }
+  
+  .header-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* give the text column room, but cap its width */
+  .header-text {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  /* tighten up heading & paragraph sizing */
+  .header-text h1 {
+    font-size: 3.5rem;   /* slightly smaller than 60px */
+    line-height: 1.1;
+  }
+  
+  .header-text .intro {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd;
+  }
+  
+  /* ensure it still stacks on mobile */
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+      gap: 1.5rem;
+    }
+    .header-img img {
+      width: 80%;
+      max-width: 300px;
+    }
+    .header-text h1 {
+      font-size: 2.5rem;
+    }
+    .header-text .intro {
+      font-size: 1rem;
+    }
+  }
+
+  /* ─── SEQUENTIAL WORD FADE-IN ───────────────────────────────────────────────── */
+.animated-bg span {
+    display: inline-block;         /* ensures transform won’t affect other spans */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.5s ease-out forwards;
+  }
+  
+  /* stagger each word by 0.4s */
+  .animated-bg span:nth-child(1) { animation-delay: 0.5s; }
+  .animated-bg span:nth-child(2) { animation-delay: 0.9s; }
+  .animated-bg span:nth-child(3) { animation-delay: 1.3s; }
+  .animated-bg span:nth-child(4) { animation-delay: 1.7s; }
+  .animated-bg span:nth-child(5) { animation-delay: 2.1s; }
+  .animated-bg span:nth-child(6) { animation-delay: 2.5s; }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+   
+    }
+  }
+  
+
+
+
+  
   
   
