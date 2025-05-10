@@ -263,13 +263,17 @@
   <script>
     // intro → main site
     function startSite() {
-      const intro = document.getElementById('intro');
-      intro.style.opacity = 0;
-      setTimeout(() => {
-        intro.style.display = 'none';
-        document.getElementById('main').style.display = 'block';
-      }, 800);
-    }
+  const intro = document.getElementById('intro');
+  const main = document.getElementById('main');
+  intro.style.opacity = 0;
+
+  setTimeout(() => {
+    intro.style.display = 'none';
+    main.style.display = 'block';
+    main.classList.add('fade-in'); // 👈 this line triggers the animation
+  }, 800);
+}
+
     // optional auto-advance after 5s:
     // setTimeout(startSite, 5000);
 
