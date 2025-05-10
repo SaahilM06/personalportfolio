@@ -1328,6 +1328,71 @@ nav .fas{
     }
   
   }
+
+  /* Ensure proper stacking and spacing on mobile */
+@media (max-width: 600px) {
+
+    /* Fix header intro vertical spacing */
+    .header-content {
+      margin-top: 100px;
+      padding: 20px 10px;
+    }
+  
+    .header-text h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+  
+    .header-text .intro {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+  
+    /* Ensure "About Me" section is not overlapping */
+    #about {
+      padding-top: 60px; /* push it lower from the header */
+      margin-top: 40px;
+      position: relative;
+      z-index: 1;
+    }
+  
+    .sub-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    /* Make sure nav + intro overlay disappear cleanly */
+    #intro {
+      height: 100vh;
+      overflow: hidden;
+      z-index: 9999;
+    }
+  
+    #main {
+      position: relative;
+      z-index: 1;
+    }
+  
+    /* Tab titles */
+    .tab-titles {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .tab-links {
+      font-size: 16px;
+    }
+  
+    .tab-contents ul li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+  
   
   
 
