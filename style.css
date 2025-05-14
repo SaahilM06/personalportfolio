@@ -19,7 +19,7 @@
   .animated-bg span {
     position: absolute;
     font-size: 2.5rem;
-    color: rgba(255,255,255,0.08);
+    color: #ff474d;
     animation: float 12s linear infinite;
   }
   .animated-bg span:nth-child(1)  { top: 10%;  left: 20%;  animation-delay: 0s; }
