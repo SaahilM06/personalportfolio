@@ -41,7 +41,7 @@ const About = () => {
             <div className="space-y-6">
               <div className="prose prose-lg text-slate-300">
               <p className="text-xl leading-relaxed mb-6">
-                Hi, I’m Saahil, a Computer Science student at the University of Texas at Austin with a passion for machine learning, software development, and solving meaningful problems through technology. I love building projects that blend intelligent systems with clean, scalable code.
+                Hi, I’m Saahil, a Computer Science and Mathematics student at the University of Texas at Austin with a passion for machine learning, software development, and solving meaningful problems through technology. I love building projects that blend intelligent systems with clean, scalable code.
               </p>
 
               <p className="text-lg leading-relaxed mb-6">
