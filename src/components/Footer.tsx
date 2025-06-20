@@ -37,7 +37,7 @@ const Footer = () => {
           
           <div className="border-t border-slate-700/50 mt-8 pt-8 text-center">
             <p className="text-slate-400 flex items-center justify-center gap-2">
-              © {currentYear} Saahil Mehta. Made with <Heart size={16} className="text-red-400" /> and lots of coffee.
+              
             </p>
           </div>
         </div>
