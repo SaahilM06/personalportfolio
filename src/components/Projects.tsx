@@ -8,7 +8,7 @@ const Projects = () => {
       title: 'Debate Bot',
       description:
         'Real-time AI debate assistant that streams live audio using WebSockets, transcribes with Whisper, and generates contextual rebuttals using GPT-3.5 and Coqui TTS.',
-      image: '/debate-bot.png',
+      image: '/debatebot.png',
       technologies: ['Whisper', 'Coqui TTS', 'WebSockets', 'GPT-3.5', 'Brave Search API', 'FAISS'],
       liveUrl: '#',
       githubUrl: 'https://github.com/SaahilM06/debate-bot'
@@ -17,19 +17,19 @@ const Projects = () => {
       title: 'Volatility Predictor',
       description:
         'NLP pipeline that forecasts market volatility based on financial headlines, using Google XLNet embeddings and NLTK tone analysis for early market shift identification.',
-      image: '/volatility-predictor.png',
+      image: '/nlp.png',
       technologies: ['Python', 'Google XLNet', 'NLTK', 'Pandas', 'Finance APIs'],
       liveUrl: '#',
       githubUrl: 'https://github.com/SaahilM06/volatility-predictor'
     },
     {
-      title: 'Equity Signal Engine',
+      title: 'Sentiment Analysis Therapist',
       description:
-        'Backtestable trading signal system using public supplier-customer equity linkages, with alpha-generating strategies and visualizations for investment decisions.',
-      image: '/equity-engine.png',
-      technologies: ['Python', 'NetworkX', 'Pandas', 'yfinance', 'Matplotlib'],
+        'AI-powered mental wellness companion that analyzes user mood through text or speech, detects emotional states using NLP models, and responds with supportive, empathetic dialogue. Tracks emotional trends and suggests self-care tips.',
+      image: '/sentiment.png',
+      technologies: ['Whisper', 'Transformers', 'HuggingFace', 'Python', 'React', 'MongoDB'],
       liveUrl: '#',
-      githubUrl: 'https://github.com/SaahilM06/equity-signal-engine'
+      githubUrl: 'https://github.com/SaahilM06/sentiment-therapist'
     }
   ];
 
@@ -57,7 +57,8 @@ const Projects = () => {
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     </div>
