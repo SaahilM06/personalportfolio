@@ -40,20 +40,18 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="prose prose-lg text-slate-300">
-                <p className="text-xl leading-relaxed mb-6">
-                  I'm a passionate Full Stack Developer with a love for creating innovative web applications. 
-                  My journey in tech started with curiosity and has evolved into a career focused on building 
-                  solutions that make a difference.
-                </p>
-                <p className="text-lg leading-relaxed mb-6">
-                  With expertise in modern frameworks and a keen eye for user experience, I enjoy the entire 
-                  development process – from conceptualization to deployment. I'm always eager to learn new 
-                  technologies and tackle challenging problems.
-                </p>
-                <p className="text-lg leading-relaxed">
-                  When I'm not coding, you'll find me exploring new tech trends, contributing to open-source 
-                  projects, or sharing knowledge with the developer community.
-                </p>
+              <p className="text-xl leading-relaxed mb-6">
+                Hi, I’m Saahil, a Computer Science student at the University of Texas at Austin with a passion for machine learning, software development, and solving meaningful problems through technology. I love building projects that blend intelligent systems with clean, scalable code.
+              </p>
+
+              <p className="text-lg leading-relaxed mb-6">
+                From training ML models for real-time speech applications to developing full-stack tools with React, FastAPI, and MongoDB, I enjoy the full journey of bringing an idea to life. I’m especially interested in projects that push the boundaries of AI, embedded systems, and user-centric design.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                Outside of the classroom, you’ll find me cheering on the Golden State Warriors, contributing to open-source projects, exploring new tech trends, or traveling to discover new places and perspectives.
+              </p>
+
               </div>
             </div>
             

@@ -26,7 +26,7 @@ const Hero = () => {
             </h1>
             <div className="text-2xl md:text-4xl text-slate-300 mb-8">
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent font-semibold">
-                Full Stack Developer
+                Student + Software Engineer
               </span>
             </div>
           </div>

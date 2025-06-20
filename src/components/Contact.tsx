@@ -29,19 +29,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'saahil@example.com',
-      href: 'mailto:saahil@example.com'
+      value: 'snm3332@utexas.edu',
+      href: 'mailto:snm3332@utexas.edu'
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+1 (972) 469-3673',
+      href: 'tel:+9724693673'
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Austin, TX',
       href: '#'
     }
   ];

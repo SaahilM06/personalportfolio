@@ -1,43 +1,39 @@
-
 import React from 'react';
 import { MapPin, Calendar } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
     {
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Innovations Inc.',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
+      title: 'Software Development Project Lead',
+      company: 'Texas Instruments',
+      location: 'Dallas, TX',
+      period: 'May 2025 – Present',
       description: [
-        'Led development of high-traffic web applications serving 100k+ users',
-        'Architected and implemented microservices infrastructure using Node.js and React',
-        'Mentored junior developers and established coding standards',
-        'Improved application performance by 40% through optimization techniques'
+        'Engineered real-time fall detection on TI IWR6843 radar using a lightweight ONNX model with sub-50ms latency',
+        'Trained PyTorch classifier to distinguish human vs object falls, achieving 95% accuracy',
+        'Deployed FastAPI pipeline to stream event alerts to client interfaces'
       ]
     },
     {
-      title: 'Full Stack Developer',
-      company: 'Digital Solutions LLC',
-      location: 'New York, NY',
-      period: '2020 - 2022',
-      description: [
-        'Developed and maintained multiple client-facing web applications',
-        'Collaborated with design teams to implement pixel-perfect UI/UX',
-        'Integrated third-party APIs and payment gateways',
-        'Reduced bug reports by 60% through comprehensive testing strategies'
-      ]
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'StartupXYZ',
+      title: 'Software Engineer Intern',
+      company: 'Suits',
       location: 'Austin, TX',
-      period: '2019 - 2020',
+      period: 'Aug 2024 – Present',
       description: [
-        'Built responsive web applications using React and TypeScript',
-        'Implemented modern CSS frameworks and design systems',
-        'Collaborated in agile development environment',
-        'Contributed to open-source projects and technical documentation'
+        'Built GPT-3.5-powered RAG pipeline increasing chatbot relevance by 40%',
+        'Predicted payment likelihood using logistic regression (85% accuracy)',
+        'Designed mobile UI with React Native and Figma, enhancing usability'
+      ]
+    },
+    {
+      title: 'AI Quality Assurance Intern',
+      company: 'Efficienergi Consulting',
+      location: 'Mumbai, India',
+      period: 'Jun 2023 – Sep 2023',
+      description: [
+        'Developed fully offline AI chatbot to parse technical manuals',
+        'Integrated LangChain, Docker, and HTML/CSS for modularity',
+        'Reduced response time by 40%, improving internal efficiency'
       ]
     }
   ];
