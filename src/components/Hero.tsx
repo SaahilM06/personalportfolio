@@ -24,7 +24,7 @@ const Hero = () => {
 
             {/* Name with gradient and shine effect */}
             <div className="relative mb-6">
-              <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-400 to-white bg-[length:250%_100%] animate-[shine_3s_ease-in-out_infinite]">
+              <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-400 to-white bg-[length:250%_100%] animate-[text-shimmer_3s_ease-in-out_infinite]">
                 Saahil Mehta
               </h1>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] animate-[shimmer_2s_infinite]" />
@@ -37,13 +37,13 @@ const Hero = () => {
               </span>
             </div>
           </div>
-          
+
           {/* Description with fade-in and blur effect */}
           <p className="text-lg md:text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed opacity-0 animate-[fade-in_1s_ease-out_0.8s_forwards] [text-shadow:0_0_30px_rgba(59,130,246,0.1)]">
-            I'm passionate about building AI-powered tools, real-time systems, and creative software that solves real problems. 
+            I'm passionate about building AI-powered tools, real-time systems, and creative software that solves real problems.
             From debate bots and embedded ML to cloud-native apps, I love engineering projects that blend intelligence, usability, and impact.
           </p>
-          
+
           {/* CTA buttons with hover effects */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 opacity-0 animate-[slide-up_1s_ease-out_1s_forwards]">
             <Button
@@ -65,7 +65,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-400/50 to-blue-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
             </a>
           </div>
-          
+
           {/* Social links with hover effects */}
           <div className="flex justify-center space-x-6 mb-16 opacity-0 animate-[fade-in_1s_ease-out_1.2s_forwards]">
             {[
@@ -86,7 +86,7 @@ const Hero = () => {
               </a>
             ))}
           </div>
-          
+
           {/* Scroll indicator with pulse effect */}
           <div className="opacity-0 animate-[fade-in_1s_ease-out_1.4s_forwards]">
             <button

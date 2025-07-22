@@ -1,33 +1,9 @@
 
 import React from 'react';
-import { Code, Lightbulb, Users, Zap } from 'lucide-react';
 
 const About = () => {
-  const highlights = [
-    {
-      icon: Code,
-      title: 'Clean Code',
-      description: 'Writing maintainable, scalable, and efficient code'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Problem Solver',
-      description: 'Creative solutions to complex technical challenges'
-    },
-    {
-      icon: Users,
-      title: 'Team Player',
-      description: 'Collaborative approach to achieving project goals'
-    },
-    {
-      icon: Zap,
-      title: 'Fast Learner',
-      description: 'Quick to adapt to new technologies and frameworks'
-    }
-  ];
-
   return (
-    <section id="about" className="py-20 bg-slate-800/30">
+    <section id="about" className="py-20 bg-[rgb(10,16,29)]">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -36,38 +12,54 @@ const About = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
           </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="prose prose-lg text-slate-300">
-              <p className="text-xl leading-relaxed mb-6">
-                Hi, I’m Saahil, a Computer Science and Mathematics student at the University of Texas at Austin with a passion for machine learning, software development, and solving meaningful problems through technology. I love building projects that blend intelligent systems with clean, scalable code.
-              </p>
 
-              <p className="text-lg leading-relaxed mb-6">
-                From training ML models for real-time speech applications to developing full-stack tools with React, FastAPI, and MongoDB, I enjoy the full journey of bringing an idea to life. I’m especially interested in projects that push the boundaries of AI, embedded systems, and user-centric design.
-              </p>
-
-              <p className="text-lg leading-relaxed">
-                Outside of the classroom, you’ll find me cheering on the Golden State Warriors, contributing to open-source projects, exploring new tech trends, or traveling to discover new places and perspectives.
-              </p>
-
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image Section */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
+              <div className="relative bg-[rgb(15,23,42)] rounded-2xl p-6 border border-white/10">
+                <img
+                  src="/Facetune_13-07-2025-07-22-57.png"
+                  alt="Profile"
+                  className="w-full h-auto rounded-xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               </div>
             </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {highlights.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 hover:border-blue-400/30"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                    <item.icon size={24} className="text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-slate-400">{item.description}</p>
-                </div>
-              ))}
+
+            {/* Content Section */}
+            <div className="space-y-6">
+              <div className="bg-[rgb(15,23,42)]/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 transform hover:scale-[1.02] transition-transform duration-300">
+                <h3 className="text-2xl font-semibold text-white mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  Who I Am
+                </h3>
+                <p className="text-slate-300 leading-relaxed">
+                  I'm a Computer Science student at UT Austin with a passion for AI/ML and full-stack development. 
+                  I love building innovative solutions that combine cutting-edge technology with practical applications.
+                </p>
+              </div>
+
+              <div className="bg-[rgb(15,23,42)]/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 transform hover:scale-[1.02] transition-transform duration-300">
+                <h3 className="text-2xl font-semibold text-white mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  What I Do
+                </h3>
+                <p className="text-slate-300 leading-relaxed">
+                  I specialize in developing AI-powered applications, from NLP systems to real-time ML models. 
+                  My work spans from low-level embedded systems to cloud-native applications, always focusing on 
+                  creating impactful solutions that push technological boundaries.
+                </p>
+              </div>
+
+              <div className="bg-[rgb(15,23,42)]/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 transform hover:scale-[1.02] transition-transform duration-300">
+                <h3 className="text-2xl font-semibold text-white mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  My Goals
+                </h3>
+                <p className="text-slate-300 leading-relaxed">
+                  I aim to leverage technology to solve real-world problems, particularly in AI ethics and accessibility. 
+                  I'm constantly learning and experimenting with new technologies to create more intelligent and 
+                  user-centric solutions.
+                </p>
+              </div>
             </div>
           </div>
         </div>
