@@ -34,7 +34,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-slate-800/30 relative">
+    <section id="projects" className="py-20 bg-slate-800/30">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -51,19 +51,18 @@ const Projects = () => {
                 className="sticky top-0 h-screen flex items-center justify-center"
                 style={{ zIndex: index + 1 }}
               >
-                <div className="w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300 transform hover:scale-[1.02] hover:border-blue-400/30 group shadow-2xl">
+                <div className="w-full bg-[rgb(10,25,47)] rounded-xl overflow-hidden shadow-2xl hover:scale-[1.01] transition-transform duration-300 border border-white/10">
                   <div className="grid md:grid-cols-2 gap-0 h-[70vh]">
                     <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 relative overflow-hidden">
                       <img
                         src={project.image}
                         alt={project.title}
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-[rgb(10,25,47)] to-transparent"></div>
                     </div>
 
-                    <div className="p-8 flex flex-col justify-center">
+                    <div className="p-8 flex flex-col justify-center bg-[rgb(10,25,47)]">
                       <h3 className="text-3xl font-bold text-white mb-4">{project.title}</h3>
                       <p className="text-slate-300 mb-6 leading-relaxed text-lg">{project.description}</p>
                       
@@ -81,7 +80,7 @@ const Projects = () => {
                       <div className="flex gap-4">
                         <Button
                           variant="outline"
-                          className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900 flex items-center gap-2"
+                          className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-[rgb(10,25,47)] flex items-center gap-2"
                           asChild
                         >
                           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
@@ -91,7 +90,7 @@ const Projects = () => {
                         </Button>
                         <Button
                           variant="outline"
-                          className="border-slate-400 text-slate-400 hover:bg-slate-400 hover:text-slate-900 flex items-center gap-2"
+                          className="border-slate-400 text-slate-400 hover:bg-slate-400 hover:text-[rgb(10,25,47)] flex items-center gap-2"
                           asChild
                         >
                           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
