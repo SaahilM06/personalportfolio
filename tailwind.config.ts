@@ -89,21 +89,46 @@ export default {
 				'fade-in': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(20px)'
+						transform: 'translateY(10px)'
 					},
 					'100%': {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'slide-up': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'shine': {
+					'0%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'shimmer': {
+					'100%': { transform: 'translateX(100%)' }
+				},
+				'gradient': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
+				},
+				'background-shine': {
+					from: { backgroundPosition: '200% 0' },
+					to: { backgroundPosition: '-200% 0' }
+				},
+				'text-shimmer': {
+					from: { backgroundPosition: '0% 50%' },
+					to: { backgroundPosition: '-200% 50%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+				'pulse': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'background-shine': 'background-shine 8s linear infinite',
+				'text-shimmer': 'text-shimmer 4s linear infinite',
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [],
 } satisfies Config;

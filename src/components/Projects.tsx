@@ -43,7 +43,7 @@ const Projects = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
           </div>
-          
+
           <div className="relative" style={{ height: `${projects.length * 100}vh` }}>
             {projects.map((project, index) => (
               <div
@@ -62,7 +62,7 @@ const Projects = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                     </div>
-                    
+
                     <div className="p-8 flex flex-col justify-center">
                       <h3 className="text-3xl font-bold text-white mb-4">{project.title}</h3>
                       <p className="text-slate-300 mb-6 leading-relaxed text-lg">{project.description}</p>
@@ -77,7 +77,7 @@ const Projects = () => {
                           </span>
                         ))}
                       </div>
-                      
+
                       <div className="flex gap-4">
                         <Button
                           variant="outline"
