@@ -4,15 +4,26 @@ import { Calendar, MapPin, Briefcase } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Machine Learning Research Intern',
+      title: 'AI QA Engineer Intern',
+      company: 'Aristocrat Technologies',
+      location: 'Austin, TX',
+      period: 'Aug 2025 – Present',
+      description: [
+        'Developed Llama-based parsing workflows, integrating OCR preprocessing and RAG techniques to extract details from Arts & Game Rules spreadsheets and validate against Casino Game Help Screens to detect missing details',
+        'Automated QA using internal tools such as Excel Splitter, KIYO Creator, Photoshop scripting, and HS Text Validator to detect errors',
+        'Integrated Jira into workflow for error tracking and to enhance accuracy and translation checks'
+      ]
+    },
+    {
+      title: 'Machine Learning Engineer Intern',
       company: 'Texas Instruments',
       location: 'Dallas, TX',
       period: 'May 2025 – Aug 2025',
       description: [
-        'Led development of an edge-cloud fall-detection system leveraging mmWave sensors and AWS services',
-        'Achieved >98% reduction in power consumption through optimized ML model quantization',
-        'Built MQTT pipeline into AWS IoT Core, Lambda, and SageMaker for real-time processing',
-        'Developed PointNet++ classifier processing 100+ events/sec with 95% accuracy'
+        'Led a team of 4 engineers to build an end-to-end ML pipeline using the mmWave sensor to detect human falls and monitor occupancy in real time, achieving 90%+ accuracy',
+        'Implemented an edge-to-cloud pipeline by parsing binary sensor output into JSON, publishing data via MQTT to AWS IoT Core, and using AWS Lambda to trigger inference on an EC2-hosted PointNet-LSTM model',
+        'Developed a deep learning PointNet-LSTM model to classify human activity from 3D point cloud data, applying predictive modeling and sequence learning techniques, outperforming existing TI baselines by 15%',
+        'Created a dynamic front-end with React and a modular back-end using FastAPI and WebSockets, allowing users to upload datasets, choose model architectures, and train machine learning models from a real-time dashboard'
       ]
     },
     {
@@ -21,20 +32,8 @@ const Experience = () => {
       location: 'Austin, TX',
       period: 'Aug 2024 – May 2025',
       description: [
-        'Boosted chatbot accuracy 40% with LangChain and Hugging Face Transformers',
-        'Designed payment behavior predictor on 15,000+ transactions achieving 94.6% accuracy',
-        'Implemented real-time data processing pipeline handling 1000+ requests/minute'
-      ]
-    },
-    {
-      title: 'Software Engineer',
-      company: 'Texas Convergent',
-      location: 'Austin, TX',
-      period: 'Aug 2024 – Present',
-      description: [
-        'Launched MVP with React and Firebase backends serving 5,000+ users',
-        'Delivered apps with 5,000+ downloads across Apple and Google Play Stores',
-        'Led investor demo initiatives with live product showcases'
+        'Built a RAG QA pipeline with LangChain to retrieve and summarize class action lawsuit details for users, integrating Hugging Face Transformers and Pinecone for vector search, which increased result retrieval by 40%',
+        'Designed a predictive modeling engine using scikit-learn with logistic regression to predict individual settlement payouts in class action cases from 15,000+ real transactions, increasing prediction accuracy by 32%'
       ]
     }
   ];

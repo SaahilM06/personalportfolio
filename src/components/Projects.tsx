@@ -5,31 +5,31 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
+      title: 'Poker AI Bot',
+      description:
+        'Architected a Texas Hold\'em AI leveraging game theory to accurately play heads-up poker. Implemented Counterfactual Regret Minimization (CFR) to iteratively train action probabilities at each game state, training the AI through millions of hands. Simplified complex betting and card states by grouping similar hand strengths into buckets.',
+      image: '/poke.png',
+      technologies: ['Python', 'Game Theory', 'CFR Algorithm', 'Poker Engine', 'Probability Theory'],
+      liveUrl: '#',
+      githubUrl: 'https://github.com/SaahilM06/poker-ai-bot'
+    },
+    {
+      title: 'Social Arbitrage Swing Trader',
+      description:
+        'Conceptualized a swing trading algorithm to exploit sentiment-price inefficiencies. Consolidated Reddit, Twitter, and news data to monitor abnormal spikes in ticker mentions and sentiment trends. Trained an unidirectional LSTM neural network to classify sentiment from time-series social and news data.',
+      image: '/nlp.png',
+      technologies: ['Python', 'LSTM', 'Sentiment Analysis', 'yfinance', 'Reddit API', 'Twitter API'],
+      liveUrl: '#',
+      githubUrl: 'https://github.com/SaahilM06/social-arbitrage-trader'
+    },
+    {
       title: 'Debate Bot',
       description:
-        'Real-time AI debate assistant that streams live audio using WebSockets, transcribes with Whisper, and generates contextual rebuttals using GPT-3.5 and Coqui TTS.',
+        'Built a Full-Stack debate assistant for real-time rebuttals, tested in 10+ rounds with 90% accuracy. Built real-time audio pipeline with WebSockets, Whisper ASR, and Coqui TTS for live debate interactions. Integrated Brave Search API with FAISS indexing and GPT-3.5 to generate contextual rebuttals in real time.',
       image: '/debatebot.png',
-      technologies: ['Whisper', 'Coqui TTS', 'WebSockets', 'GPT-3.5', 'Brave Search API', 'FAISS'],
+      technologies: ['WebSockets', 'Whisper ASR', 'Coqui TTS', 'GPT-3.5', 'Brave Search API', 'FAISS'],
       liveUrl: '#',
       githubUrl: 'https://github.com/SaahilM06/debate-bot'
-    },
-    {
-      title: 'Volatility Predictor',
-      description:
-        'NLP pipeline that forecasts market volatility based on financial headlines, using Google XLNet embeddings and NLTK tone analysis for early market shift identification.',
-      image: '/nlp.png',
-      technologies: ['Python', 'Google XLNet', 'NLTK', 'Pandas', 'Finance APIs'],
-      liveUrl: '#',
-      githubUrl: 'https://github.com/SaahilM06/volatility-predictor'
-    },
-    {
-      title: 'Sentiment Analysis Therapist',
-      description:
-        'AI-powered mental wellness companion that analyzes user mood through text or speech, detects emotional states using NLP models, and responds with supportive, empathetic dialogue. Tracks emotional trends and suggests self-care tips.',
-      image: '/sentiment.png',
-      technologies: ['Whisper', 'Transformers', 'HuggingFace', 'Python', 'React', 'MongoDB'],
-      liveUrl: '#',
-      githubUrl: 'https://github.com/SaahilM06/sentiment-therapist'
     }
   ];
 

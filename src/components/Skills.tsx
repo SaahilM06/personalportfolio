@@ -5,35 +5,42 @@ const Skills = () => {
     {
       title: 'Languages',
       skills: [
+        { name: 'Java', level: 95 },
         { name: 'Python', level: 95 },
-        { name: 'Java', level: 90 },
-        { name: 'C++', level: 88 },
-        { name: 'C', level: 85 },
-        { name: 'SQL', level: 80 }
+        { name: 'C++', level: 90 },
+        { name: 'C#', level: 88 },
+        { name: 'R', level: 85 },
+        { name: 'SQL', level: 85 },
+        { name: 'JavaScript', level: 90 },
+        { name: 'HTML/CSS', level: 88 }
       ]
     },
     {
-      title: 'Full Stack',
+      title: 'Frameworks & Libraries',
       skills: [
         { name: 'React', level: 95 },
-        { name: 'Firebase', level: 90 },
-        { name: 'Node.js', level: 88 },
-        { name: 'FastAPI', level: 85 },
-        { name: 'HTML/CSS', level: 84 },
-        { name: 'WebSockets', level: 82 }
+        { name: 'Pandas', level: 90 },
+        { name: 'FastAPI', level: 90 },
+        { name: 'Spring', level: 85 },
+        { name: 'LangChain', level: 88 },
+        { name: 'scikit-learn', level: 90 },
+        { name: 'TensorFlow', level: 85 },
+        { name: 'NumPy', level: 90 },
+        { name: 'PyTorch', level: 85 }
       ]
     },
     {
-      title: 'Tools & Others',
+      title: 'Platforms & Tools',
       skills: [
-        { name: 'Git', level: 95 },
+        { name: 'AWS', level: 90 },
+        { name: 'Firebase', level: 85 },
         { name: 'Docker', level: 85 },
-        { name: 'AWS', level: 80 },
-        { name: 'Whisper', level: 85 },
-        { name: 'Coqui TTS', level: 83 },
-        { name: 'FAISS', level: 78 },
+        { name: 'Git', level: 95 },
         { name: 'Figma', level: 80 },
-        { name: 'LaTeX', level: 75 }
+        { name: 'WebSockets', level: 85 },
+        { name: 'PostgreSQL', level: 85 },
+        { name: 'MongoDB', level: 80 },
+        { name: 'DynamoDB', level: 80 }
       ]
     }
   ];

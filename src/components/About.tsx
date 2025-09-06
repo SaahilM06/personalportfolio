@@ -34,8 +34,9 @@ const About = () => {
                   Who I Am
                 </h3>
                 <p className="text-slate-300 leading-relaxed">
-                  I'm a Computer Science student at UT Austin with a passion for AI/ML and full-stack development. 
-                  I love building innovative solutions that combine cutting-edge technology with practical applications.
+                  I'm a Computer Science student at the University of Texas at Austin, graduating in May 2027. 
+                  I have a passion for AI/ML, machine learning engineering, and full-stack development, with experience 
+                  in building end-to-end ML pipelines and real-time applications.
                 </p>
               </div>
 
@@ -44,9 +45,9 @@ const About = () => {
                   What I Do
                 </h3>
                 <p className="text-slate-300 leading-relaxed">
-                  I specialize in developing AI-powered applications, from NLP systems to real-time ML models. 
-                  My work spans from low-level embedded systems to cloud-native applications, always focusing on 
-                  creating impactful solutions that push technological boundaries.
+                  I specialize in developing AI-powered applications, from deep learning models to real-time ML pipelines. 
+                  My work spans from edge-to-cloud systems using mmWave sensors to RAG-based QA systems, always focusing on 
+                  creating impactful solutions that leverage cutting-edge AI/ML technologies.
                 </p>
               </div>
 
