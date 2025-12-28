@@ -4,26 +4,26 @@ import { Calendar, MapPin, Briefcase } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: 'AI QA Engineer Intern',
+      title: 'Software Engineer Intern',
       company: 'Aristocrat Technologies',
       location: 'Austin, TX',
-      period: 'Aug 2025 – Present',
+      period: 'Aug 2025 – Dec 2025',
       description: [
-        'Developed Llama-based parsing workflows, integrating OCR preprocessing and RAG techniques to extract details from Arts & Game Rules spreadsheets and validate against Casino Game Help Screens to detect missing details',
-        'Automated QA using internal tools such as Excel Splitter, KIYO Creator, Photoshop scripting, and HS Text Validator to detect errors',
-        'Integrated Jira into workflow for error tracking and to enhance accuracy and translation checks'
+        'Authored a modular parsing library in Python, converting game-requirement documentation (DOCX, Excel, TFS, JIRA) into structured header-content dictionaries significantly improving reliability for the platform\'s main LLM-generated test-case automation pipeline',
+        'Developed intelligent parsing workflows for malformed Excel spreadsheets using Mistral Small 3.1, applying fuzzy matching, data chunking, and prompt engineering to improve LLM extraction accuracy on complex datasets',
+        'Applied Llama validation against casino game implementations, reducing manual QA by 15+ hours per quarter'
       ]
     },
     {
-      title: 'Machine Learning Engineer Intern',
+      title: 'Machine Learning Engineer Fellow',
       company: 'Texas Instruments',
       location: 'Dallas, TX',
       period: 'May 2025 – Aug 2025',
       description: [
-        'Led a team of 4 engineers to build an end-to-end ML pipeline using the mmWave sensor to detect human falls and monitor occupancy in real time, achieving 90%+ accuracy',
-        'Implemented an edge-to-cloud pipeline by parsing binary sensor output into JSON, publishing data via MQTT to AWS IoT Core, and using AWS Lambda to trigger inference on an EC2-hosted PointNet-LSTM model',
-        'Developed a deep learning PointNet-LSTM model to classify human activity from 3D point cloud data, applying predictive modeling and sequence learning techniques, outperforming existing TI baselines by 15%',
-        'Created a dynamic front-end with React and a modular back-end using FastAPI and WebSockets, allowing users to upload datasets, choose model architectures, and train machine learning models from a real-time dashboard'
+        'Contributed to a team of 4 engineers using Agile Development to build an end-to-end ML pipeline using the mmWave sensor to detect human falls and monitor occupancy in real time classifying events in 90%+ accuracy',
+        'Implemented an edge-to-cloud pipeline by parsing binary sensor output into JSON, publishing the data via MQTT to AWS IoT Core, and using AWS Lambda to trigger inference on an EC2-hosted PointNet-LSTM model',
+        'Developed a deep learning PointNet-LSTM model to classify human falls from 3D point cloud data using predictive modeling and sequence learning techniques, outperforming existing TI baselines by 15%',
+        'Created a customizable front-end using React and a back-end using NodeJS and Websockets, allowing users to upload datasets, choose model architecture, and train a model in real-time directly from the dashboard'
       ]
     },
     {
@@ -32,8 +32,9 @@ const Experience = () => {
       location: 'Austin, TX',
       period: 'Aug 2024 – May 2025',
       description: [
-        'Built a RAG QA pipeline with LangChain to retrieve and summarize class action lawsuit details for users, integrating Hugging Face Transformers and Pinecone for vector search, which increased result retrieval by 40%',
-        'Designed a predictive modeling engine using scikit-learn with logistic regression to predict individual settlement payouts in class action cases from 15,000+ real transactions, increasing prediction accuracy by 32%'
+        'Built a RAG QA pipeline with LangChain to retrieve and summarize class action lawsuit details for users',
+        'Integrated Hugging Face Transformers and Pinecone for vector search, which increased result retrieval by 40%',
+        'Developed PostgreSQL/MySQL schemas for 10,000+ records, reducing data processing latency by 25%'
       ]
     }
   ];

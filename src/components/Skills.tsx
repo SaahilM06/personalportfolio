@@ -8,7 +8,7 @@ const Skills = () => {
         { name: 'Java', level: 95 },
         { name: 'Python', level: 95 },
         { name: 'C++', level: 90 },
-        { name: 'C#', level: 88 },
+        { name: 'C', level: 88 },
         { name: 'R', level: 85 },
         { name: 'SQL', level: 85 },
         { name: 'JavaScript', level: 90 },
@@ -20,7 +20,7 @@ const Skills = () => {
       skills: [
         { name: 'React', level: 95 },
         { name: 'Pandas', level: 90 },
-        { name: 'FastAPI', level: 90 },
+        { name: 'NodeJS', level: 90 },
         { name: 'Spring', level: 85 },
         { name: 'LangChain', level: 88 },
         { name: 'scikit-learn', level: 90 },

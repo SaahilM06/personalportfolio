@@ -5,27 +5,27 @@ import { Button } from "@/components/ui/button";
 const Projects = () => {
   const projects = [
     {
-      title: 'Poker AI Bot',
+      title: 'Real-Time Collaborative Editor',
       description:
-        'Architected a Texas Hold\'em AI leveraging game theory to accurately play heads-up poker. Implemented Counterfactual Regret Minimization (CFR) to iteratively train action probabilities at each game state, training the AI through millions of hands. Simplified complex betting and card states by grouping similar hand strengths into buckets.',
-      image: '/poke.png',
-      technologies: ['Python', 'Game Theory', 'CFR Algorithm', 'Poker Engine', 'Probability Theory'],
+        'Engineered a collaboration system in Go to support multi-user editing with under 100ms update propagation. Implemented Operational Transformation and CRDTs to develop algorithms that merge concurrent edits. Built goroutine concurrency pipelines to handle safe message distribution across all active WebSocket connections.',
+      image: '/placeholder.svg',
+      technologies: ['Go', 'Operational Transformation', 'CRDTs', 'WebSockets', 'Concurrency', 'Goroutines'],
       liveUrl: '#',
-      githubUrl: 'https://github.com/SaahilM06/poker-ai-bot'
+      githubUrl: '#'
     },
     {
-      title: 'Social Arbitrage Swing Trader',
+      title: 'Artificial Neural Network for Image Classification and Regression',
       description:
-        'Conceptualized a swing trading algorithm to exploit sentiment-price inefficiencies. Consolidated Reddit, Twitter, and news data to monitor abnormal spikes in ticker mentions and sentiment trends. Trained an unidirectional LSTM neural network to classify sentiment from time-series social and news data.',
-      image: '/nlp.png',
-      technologies: ['Python', 'LSTM', 'Sentiment Analysis', 'yfinance', 'Reddit API', 'Twitter API'],
+        'Built an Artificial Neural Network (ANN) from scratch in C++ for image classification and pattern recognition. Implemented layers, neurons, weights, and activation functions to process data and make accurate predictions and integrated backward propagation, modular layers, and gradient descent for streamlined training. Added multi-threading to optimize forward and backward propagation reducing model training time by 27%.',
+      image: '/placeholder.svg',
+      technologies: ['C++', 'Neural Networks', 'Backpropagation', 'Multi-threading', 'Gradient Descent', 'Image Classification'],
       liveUrl: '#',
-      githubUrl: 'https://github.com/SaahilM06/social-arbitrage-trader'
+      githubUrl: '#'
     },
     {
-      title: 'Debate Bot',
+      title: 'Real-time Debate Assistant',
       description:
-        'Built a Full-Stack debate assistant for real-time rebuttals, tested in 10+ rounds with 90% accuracy. Built real-time audio pipeline with WebSockets, Whisper ASR, and Coqui TTS for live debate interactions. Integrated Brave Search API with FAISS indexing and GPT-3.5 to generate contextual rebuttals in real time.',
+        'Built a full stack audio pipeline with WebSockets, Whisper ASR, and Coqui TTS for live debate interactions. Integrated Brave Search API with FAISS indexing and GPT-3.5 to generate contextual rebuttals in real time.',
       image: '/debatebot.png',
       technologies: ['WebSockets', 'Whisper ASR', 'Coqui TTS', 'GPT-3.5', 'Brave Search API', 'FAISS'],
       liveUrl: '#',

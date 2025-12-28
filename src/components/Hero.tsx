@@ -71,7 +71,7 @@ const Hero = () => {
             {[
               { icon: Github, href: 'https://github.com/SaahilM06', label: 'GitHub' },
               { icon: Linkedin, href: 'https://www.linkedin.com/in/saahil-mehta-5431a525b/', label: 'LinkedIn' },
-              { icon: Mail, href: 'mailto:saahilm30@gmail.com', label: 'Email' }
+              { icon: Mail, href: 'mailto:snm3332@utexas.edu', label: 'Email' }
             ].map((social, index) => (
               <a
                 key={index}

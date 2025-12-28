@@ -8,20 +8,20 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'saahilm30@gmail.com',
-      href: 'mailto:saahilm30@gmail.com'
+      value: 'snm3332@utexas.edu',
+      href: 'mailto:snm3332@utexas.edu'
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Austin, Texas',
+      value: 'Austin, TX',
       href: '#'
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: 'Available on request',
-      href: '#'
+      value: '972-469-3673',
+      href: 'tel:972-469-3673'
     }
   ];
 
