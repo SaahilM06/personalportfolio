@@ -32,13 +32,13 @@ const Header = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            {['about', 'experience', 'projects', 'skills', 'contact'].map((item) => (
+            {['about', 'experience', 'projects', 'github-stats', 'skills', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
                 className="text-slate-300 hover:text-blue-400 transition-colors duration-200 capitalize font-medium relative group"
               >
-                {item}
+                {item === 'github-stats' ? 'GitHub' : item}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 transition-all duration-200 group-hover:w-full"></span>
               </button>
             ))}
@@ -57,13 +57,13 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-slate-700/50">
             <div className="flex flex-col space-y-4 mt-4">
-              {['about', 'experience', 'projects', 'skills', 'contact'].map((item) => (
+              {['about', 'experience', 'projects', 'github-stats', 'skills', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
                   className="text-slate-300 hover:text-blue-400 transition-colors duration-200 capitalize font-medium text-left"
                 >
-                  {item}
+                  {item === 'github-stats' ? 'GitHub' : item}
                 </button>
               ))}
             </div>

@@ -1,49 +1,60 @@
 import React from 'react';
+import { Code2, Layers, Wrench, Brain } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Languages',
-      skills: [
-        { name: 'Java', level: 95 },
-        { name: 'Python', level: 95 },
-        { name: 'C++', level: 90 },
-        { name: 'C', level: 88 },
-        { name: 'R', level: 85 },
-        { name: 'SQL', level: 85 },
-        { name: 'JavaScript', level: 90 },
-        { name: 'HTML/CSS', level: 88 }
-      ]
+      icon: <Code2 size={24} />,
+      color: 'blue',
+      skills: ['Python', 'Java', 'C++', 'JavaScript', 'TypeScript', 'Go', 'C', 'R', 'SQL']
     },
     {
-      title: 'Frameworks & Libraries',
-      skills: [
-        { name: 'React', level: 95 },
-        { name: 'Pandas', level: 90 },
-        { name: 'NodeJS', level: 90 },
-        { name: 'Spring', level: 85 },
-        { name: 'LangChain', level: 88 },
-        { name: 'scikit-learn', level: 90 },
-        { name: 'TensorFlow', level: 85 },
-        { name: 'NumPy', level: 90 },
-        { name: 'PyTorch', level: 85 }
-      ]
+      title: 'AI/ML & Frameworks',
+      icon: <Brain size={24} />,
+      color: 'purple',
+      skills: ['TensorFlow', 'PyTorch', 'LangChain', 'scikit-learn', 'Pandas', 'NumPy', 'FAISS', 'OpenCV']
     },
     {
-      title: 'Platforms & Tools',
-      skills: [
-        { name: 'AWS', level: 90 },
-        { name: 'Firebase', level: 85 },
-        { name: 'Docker', level: 85 },
-        { name: 'Git', level: 95 },
-        { name: 'Figma', level: 80 },
-        { name: 'WebSockets', level: 85 },
-        { name: 'PostgreSQL', level: 85 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'DynamoDB', level: 80 }
-      ]
+      title: 'Web & Backend',
+      icon: <Layers size={24} />,
+      color: 'cyan',
+      skills: ['React', 'Node.js', 'Spring Boot', 'FastAPI', 'WebSockets', 'REST APIs', 'GraphQL', 'Next.js']
+    },
+    {
+      title: 'Tools & Cloud',
+      icon: <Wrench size={24} />,
+      color: 'green',
+      skills: ['Git', 'AWS', 'Docker', 'PostgreSQL', 'MongoDB', 'Firebase', 'Redis', 'Linux']
     }
   ];
+
+  const colorClasses = {
+    blue: {
+      bg: 'from-blue-500/10 to-blue-600/10',
+      border: 'border-blue-500/30 hover:border-blue-400/50',
+      icon: 'text-blue-400',
+      badge: 'bg-blue-600/20 text-blue-300 border-blue-600/30'
+    },
+    purple: {
+      bg: 'from-purple-500/10 to-purple-600/10',
+      border: 'border-purple-500/30 hover:border-purple-400/50',
+      icon: 'text-purple-400',
+      badge: 'bg-purple-600/20 text-purple-300 border-purple-600/30'
+    },
+    cyan: {
+      bg: 'from-cyan-500/10 to-cyan-600/10',
+      border: 'border-cyan-500/30 hover:border-cyan-400/50',
+      icon: 'text-cyan-400',
+      badge: 'bg-cyan-600/20 text-cyan-300 border-cyan-600/30'
+    },
+    green: {
+      bg: 'from-green-500/10 to-green-600/10',
+      border: 'border-green-500/30 hover:border-green-400/50',
+      icon: 'text-green-400',
+      badge: 'bg-green-600/20 text-green-300 border-green-600/30'
+    }
+  };
 
   return (
     <section id="skills" className="py-20 bg-[rgb(10,16,29)]">
@@ -53,34 +64,42 @@ const Skills = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Technical <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Skills</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full mb-4"></div>
+            <p className="text-slate-300 text-lg">Proficient in modern technologies across the full development stack</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {skillCategories.map((category, index) => (
-              <div
-                key={index}
-                className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-400/30"
-              >
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">{category.title}</h3>
-                <div className="space-y-4">
-                  {category.skills.map((skill, idx) => (
-                    <div key={idx} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-slate-300 font-medium">{skill.name}</span>
-                        <span className="text-blue-400 text-sm font-semibold">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-slate-700 rounded-full h-2">
-                        <div
-                          className="bg-gradient-to-r from-blue-600 to-cyan-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
+          <div className="grid md:grid-cols-2 gap-6">
+            {skillCategories.map((category, index) => {
+              const colors = colorClasses[category.color as keyof typeof colorClasses];
+              return (
+                <div
+                  key={index}
+                  className={`bg-gradient-to-br ${colors.bg} border ${colors.border} backdrop-blur-sm rounded-xl p-8 transition-all duration-300 transform hover:scale-[1.02]`}
+                >
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className={`${colors.icon}`}>{category.icon}</div>
+                    <h3 className="text-2xl font-bold text-white">{category.title}</h3>
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    {category.skills.map((skill, idx) => (
+                      <span
+                        key={idx}
+                        className={`px-4 py-2 ${colors.badge} rounded-lg text-sm font-medium border transition-all duration-200 hover:scale-105 hover:shadow-lg`}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
+          </div>
+
+          {/* Additional Skills Note */}
+          <div className="mt-12 text-center">
+            <p className="text-slate-400 text-sm">
+              Constantly learning and exploring new technologies to stay at the forefront of software development
+            </p>
           </div>
         </div>
       </div>
