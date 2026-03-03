@@ -7,66 +7,85 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setIsMobileMenuOpen(false);
   };
 
+  const navItems = [
+    { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' },
+  ];
+
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' : 'bg-transparent'
-    }`}>
-      <nav className="container mx-auto px-6 py-4">
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? 'bg-[#060b18]/80 backdrop-blur-lg border-b border-blue-900/20'
+          : 'bg-transparent'
+      }`}
+    >
+      <nav className="max-w-5xl mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="text-base font-semibold text-white tracking-tight hover:text-blue-300 transition-colors"
+          >
             SM
-          </div>
-          
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
-            {['about', 'experience', 'projects', 'github-stats', 'skills', 'contact'].map((item) => (
+          </button>
+
+          <div className="hidden md:flex items-center gap-8">
+            {navItems.map((item) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item)}
-                className="text-slate-300 hover:text-blue-400 transition-colors duration-200 capitalize font-medium relative group"
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-sm text-slate-400 hover:text-blue-300 transition-colors duration-200"
               >
-                {item === 'github-stats' ? 'GitHub' : item}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 transition-all duration-200 group-hover:w-full"></span>
+                {item.label}
               </button>
             ))}
+            <a
+              href="/SaahilFinalRes.pdf"
+              download
+              className="text-sm text-white bg-blue-600 hover:bg-blue-500 px-4 py-1.5 rounded-full font-medium transition-colors duration-200"
+            >
+              Resume
+            </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-slate-300 hover:text-blue-400 transition-colors"
+            className="md:hidden text-slate-400 hover:text-white transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-slate-700/50">
-            <div className="flex flex-col space-y-4 mt-4">
-              {['about', 'experience', 'projects', 'github-stats', 'skills', 'contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className="text-slate-300 hover:text-blue-400 transition-colors duration-200 capitalize font-medium text-left"
-                >
-                  {item === 'github-stats' ? 'GitHub' : item}
-                </button>
-              ))}
-            </div>
+          <div className="md:hidden mt-6 pb-4 border-t border-blue-900/20 pt-6 flex flex-col gap-4">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="text-sm text-slate-400 hover:text-blue-300 transition-colors text-left"
+              >
+                {item.label}
+              </button>
+            ))}
+            <a
+              href="/SaahilFinalRes.pdf"
+              download
+              className="text-sm text-white bg-blue-600 hover:bg-blue-500 px-4 py-1.5 rounded-full font-medium transition-colors w-fit"
+            >
+              Resume
+            </a>
           </div>
         )}
       </nav>
