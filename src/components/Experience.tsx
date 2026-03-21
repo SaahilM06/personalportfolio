@@ -40,26 +40,26 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-24 px-6 bg-blue-950/10">
+    <section id="experience" className="py-24 px-6 border-t border-zinc-200">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-sm font-medium text-blue-400/60 uppercase tracking-wider mb-12">
+        <p className="text-xs text-zinc-400 uppercase tracking-widest mb-12">
           Experience
-        </h2>
-        <div className="space-y-16">
+        </p>
+        <div className="space-y-14">
           {experiences.map((exp, index) => (
-            <div key={index} className="group">
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-4">
+            <div key={index}>
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-5">
                 <div>
-                  <h3 className="text-lg font-semibold text-white">{exp.title}</h3>
-                  <p className="text-sm text-blue-400">{exp.company}</p>
+                  <h3 className="text-base font-semibold text-zinc-900">{exp.title}</h3>
+                  <p className="text-sm text-zinc-500">{exp.company}</p>
                 </div>
-                <p className="text-sm text-slate-500 shrink-0">
+                <p className="text-xs text-zinc-400 shrink-0">
                   {exp.period} &middot; {exp.location}
                 </p>
               </div>
-              <ul className="space-y-3 border-l border-blue-900/30 pl-4 ml-0.5">
+              <ul className="space-y-2.5 border-l border-zinc-200 pl-4">
                 {exp.bullets.map((bullet, idx) => (
-                  <li key={idx} className="text-sm text-slate-400 leading-relaxed">
+                  <li key={idx} className="text-sm text-zinc-500 leading-relaxed">
                     {bullet}
                   </li>
                 ))}

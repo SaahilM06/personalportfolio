@@ -3,7 +3,7 @@ import React from 'react';
 import { GraduationCap, Crosshair, MapPin, Award } from 'lucide-react';
 
 const About = () => {
-  const cards = [
+  const facts = [
     {
       icon: GraduationCap,
       label: 'Education',
@@ -31,22 +31,22 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 px-6">
+    <section id="about" className="py-24 px-6 border-t border-zinc-200">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-sm font-medium text-blue-400/60 uppercase tracking-wider mb-10">
-          About
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {cards.map((card, index) => (
+        <p className="text-xs text-zinc-400 uppercase tracking-widest mb-10">
+          Quick Facts
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {facts.map((fact, index) => (
             <div
               key={index}
-              className="bg-slate-900/40 border border-blue-900/20 rounded-xl p-5 hover:border-blue-500/25 transition-all duration-300"
+              className="bg-white border border-zinc-200 rounded-xl p-5 hover:border-zinc-400 transition-colors duration-200"
             >
-              <card.icon size={18} className="text-blue-400/50 mb-3" />
-              <p className="text-xs text-slate-500 uppercase tracking-wider mb-1.5">{card.label}</p>
-              <p className="text-sm font-medium text-slate-200">{card.value}</p>
-              {card.sub && (
-                <p className="text-xs text-slate-500 mt-1">{card.sub}</p>
+              <fact.icon size={16} className="text-zinc-400 mb-3" />
+              <p className="text-xs text-zinc-400 uppercase tracking-wider mb-1.5">{fact.label}</p>
+              <p className="text-sm font-medium text-zinc-800">{fact.value}</p>
+              {fact.sub && (
+                <p className="text-xs text-zinc-400 mt-1">{fact.sub}</p>
               )}
             </div>
           ))}
