@@ -13,8 +13,6 @@ const Hero = () => {
         <p className="text-base text-zinc-600 max-w-xl leading-relaxed mb-8">
           Hi, I'm Saahil Mehta. Student at UT Austin studying computer science.
           Some of my hobbies include playing basketball, following the Golden State Warriors, and reading.
-          Incoming backend software engineer at{' '}
-          <span className="text-zinc-900 font-medium">Apple</span>.
         </p>
 
         <div className="flex items-center gap-5">
