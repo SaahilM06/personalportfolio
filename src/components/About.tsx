@@ -31,9 +31,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 px-6 border-t border-zinc-200">
+    <section id="about" className="py-14 px-6 border-t border-zinc-200">
       <div className="max-w-5xl mx-auto">
-        <p className="text-xs text-zinc-400 uppercase tracking-widest mb-10">
+        <p className="text-xs text-zinc-500 uppercase tracking-widest mb-6">
           Quick Facts
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -42,11 +42,11 @@ const About = () => {
               key={index}
               className="bg-white border border-zinc-200 rounded-xl p-5 hover:border-zinc-400 transition-colors duration-200"
             >
-              <fact.icon size={16} className="text-zinc-400 mb-3" />
-              <p className="text-xs text-zinc-400 uppercase tracking-wider mb-1.5">{fact.label}</p>
-              <p className="text-sm font-medium text-zinc-800">{fact.value}</p>
+              <fact.icon size={16} className="text-zinc-500 mb-3" />
+              <p className="text-xs text-zinc-500 uppercase tracking-wider mb-1.5">{fact.label}</p>
+              <p className="text-sm font-semibold text-zinc-800">{fact.value}</p>
               {fact.sub && (
-                <p className="text-xs text-zinc-400 mt-1">{fact.sub}</p>
+                <p className="text-xs text-zinc-500 mt-1">{fact.sub}</p>
               )}
             </div>
           ))}

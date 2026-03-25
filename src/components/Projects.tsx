@@ -68,10 +68,10 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="py-24 border-t border-zinc-200">
+    <section id="projects" className="py-14 border-t border-zinc-200">
       <div className="max-w-5xl mx-auto px-6">
-        <div className="flex items-center justify-between mb-10">
-          <p className="text-xs text-zinc-400 uppercase tracking-widest">Projects</p>
+        <div className="flex items-center justify-between mb-6">
+          <p className="text-xs text-zinc-500 uppercase tracking-widest">Projects</p>
           <div className="flex items-center gap-2">
             <button
               onClick={() => scroll('left')}
@@ -113,7 +113,7 @@ const Projects = () => {
                 {project.title}
               </h3>
 
-              <p className="text-sm text-zinc-500 leading-relaxed mb-6 flex-1">
+              <p className="text-sm text-zinc-600 leading-relaxed mb-6 flex-1">
                 {project.description}
               </p>
 
