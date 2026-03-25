@@ -6,19 +6,15 @@ const Hero = () => {
   return (
     <section className="pt-32 pb-16 px-6">
       <div className="max-w-5xl mx-auto w-full">
-        <p className="text-xs text-zinc-500 uppercase tracking-widest mb-4">
-          UT Austin &middot; CS '27
-        </p>
-
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-zinc-900 tracking-tight leading-[0.95] mb-6">
           Saahil Mehta
         </h1>
 
-        <p className="text-base text-zinc-600 max-w-lg leading-relaxed mb-8">
-          Computer Science student at UT Austin. Interested in distributed
-          systems, low-latency engineering, and building high-performance
-          software. In my free time I play basketball, follow the Golden State
-          Warriors, and read.
+        <p className="text-base text-zinc-600 max-w-xl leading-relaxed mb-8">
+          Hi, I'm Saahil Mehta. Student at UT Austin studying computer science.
+          Some of my hobbies include playing basketball, following the Golden State Warriors, and reading.
+          Incoming backend software engineer at{' '}
+          <span className="text-zinc-900 font-medium">Apple</span>.
         </p>
 
         <div className="flex items-center gap-5">
